@@ -1,17 +1,9 @@
 <script lang="ts">
-  import Counter from './lib/Counter.svelte'
+	import "./app.css";
+	import Header from "./lib/Header.svelte";
 </script>
 
 <main>
-  <h1>Hey, kiddo...</h1>
-	<p><s>please hire me, im cool</s></p>
-
-  <div>
-    <Counter />
-  </div>
-
+	<Header/>
+  	<h1 class="heading uppercase font-extrabold  bottom-0 mb-10 text-white">Hey, kiddo</h1>
 </main>
-
-<style>
-
-</style>
