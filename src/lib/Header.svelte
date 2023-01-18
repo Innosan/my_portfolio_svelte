@@ -1,11 +1,11 @@
 <script lang="ts">
-	let currentlyStudy = "Svelte";
+	export let navItems;
 </script>
 
-<nav class="flex gap-10">
-	<a href="">Home</a>
-	<a href="">Projects</a>
-	<a href="">Contact</a>
+<nav class="flex gap-20 justify-end">
+	{#each navItems as {title, link}}
+		<a href={link}>{title}</a>
+	{/each}
 </nav>
 
 <style lang="scss">
@@ -21,6 +21,7 @@
 		border-radius: 12px;
 
 		padding: 15px 20px;
+		margin: -15px -20px;
 
 		&:hover {
 			opacity: .8;
