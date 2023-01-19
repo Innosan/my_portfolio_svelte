@@ -32,17 +32,17 @@
 		{
 			icon: githubIcon,
 			link: "https://github.com/Innosan",
-			title: "My GitHub"
+			title: "GitHub"
 		},
 		{
 			icon: telegramIcon,
 			link: "https://t.me/inno_san",
-			title: "My Telegram"
+			title: "Telegram"
 		},
 		{
 			icon: spotifyIcon,
 			link: "https://open.spotify.com/artist/5CySiPyPSavXUd1RhJ3bUS?si=HVnCEumMSsqs8NYbULKNqg",
-			title: "My Spotify"
+			title: "Spotify"
 		},
 	]
 
