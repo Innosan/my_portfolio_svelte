@@ -6,6 +6,6 @@
 
 <nav class="flex gap-20 justify-end">
 	{#each navItems as {title, link}}
-		<NavItem title={title} link={link} icon={null}/>
+		<NavItem title={title} pageLink={link} icon={null}/>
 	{/each}
 </nav>

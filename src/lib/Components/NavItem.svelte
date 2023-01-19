@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 
-	export let link, title, icon;
+	import {link} from "svelte-routing";
+
+
+	export let pageLink, title, icon;
 
 	let visible = false;
 
@@ -11,7 +14,7 @@
 </script>
 
 <div class="flex flex-col" on:mouseover={toggleVisibility} on:mouseout={toggleVisibility}>
-	<a href={link} class="opacity-70 hover:opacity-100 transition">
+	<a href={pageLink} use:link class="opacity-70 hover:opacity-100 transition">
 		{title}
 		{#if icon}
 			<img src={icon} alt={title}>

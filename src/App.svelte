@@ -2,10 +2,21 @@
 	import "./app.css";
 
 	/*
+	Libs
+	 */
+	import { Router, Route } from 'svelte-routing'
+
+	/*
 	Components
 	 */
-	import Header from "./lib/Header.svelte";
-	import Footer from "./lib/Footer.svelte";
+	import Header from "./lib/Components/Header.svelte";
+	import Footer from "./lib/Components/Footer.svelte";
+
+	/*
+	Pages
+	 */
+	import Home from "./Pages/Home.svelte";
+	import Projects from "./Pages/Projects.svelte";
 
 	/*
 	Icons
@@ -13,21 +24,23 @@
 	import githubIcon from "./assets/icons/socials/Github.svg";
 	import spotifyIcon from "./assets/icons/socials/Spotify.svg";
 	import telegramIcon from "./assets/icons/socials/Telegram.svg";
+	import Contacts from "./Pages/Contacts.svelte";
 
 	let navItems = [
 		{
 			title: "Home",
-			link: "#home",
+			link: "/",
 		},
 		{
 			title: "Projects",
-			link: "#projects",
+			link: "/projects",
 		},
 		{
 			title: "Contacts",
-			link: "#contacts"
+			link: "/contacts"
 		}
 	]
+
 	let footerItems = [
 		{
 			icon: githubIcon,
@@ -52,14 +65,17 @@
 
 	<Header navItems = {navItems}/>
 
-	<div class="text-white font-bold text-5xl gap-4 flex flex-col text-right">
-		<h1 class="mb-1 heading"><span class="strokeme">Hi!</span></h1>
-
-		<p class="text-6xl">I'm Mikhail,</p>
-		<p>lovely <span class="strokeme">front-end</span> developer</p>
-		<p class="text-2xl text-gray-200 underline">St. Petersburg, Russia</p>
-
-	</div>
+	<Router>
+		<Route path="/">
+			<Home/>
+		</Route>
+		<Route path="/projects">
+			<Projects/>
+		</Route>
+		<Route path="/contacts">
+			<Contacts/>
+		</Route>
+	</Router>
 
 	<Footer footerItems={footerItems}/>
 
