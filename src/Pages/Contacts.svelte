@@ -1,5 +1,5 @@
 <script lang="ts">
-import AnimatedPage from "../lib/Components/ServiceComponents/AnimatedPage.svelte";
+import AnimatedPage from "../lib/Components/ServiceComponents/Animated.svelte";
 </script>
 
 <AnimatedPage>
