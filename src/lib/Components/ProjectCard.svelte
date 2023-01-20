@@ -2,10 +2,7 @@
 
 import Animated from "./ServiceComponents/Animated.svelte";
 
-export let title;
-export let description;
-export let dateCreated;
-export let mainLanguage;
+export let title, description, dateCreated, mainLanguage, tagIcons;
 
 </script>
 
@@ -17,5 +14,10 @@ export let mainLanguage;
         </div>
         <p class="w-3/5">{description}</p>
         <p class="text-xl">{dateCreated}</p>
+		<div class="flex flex-row gap-5">
+			{#each Object.values(tagIcons) as icon}
+				{@html icon}
+			{/each}
+		</div>
     </div>
 </Animated>
