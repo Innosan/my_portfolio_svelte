@@ -3,7 +3,6 @@
 
 	import {link} from "svelte-routing";
 
-
 	export let pageLink, title, icon;
 
 	let visible = false;
