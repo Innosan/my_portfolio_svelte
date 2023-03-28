@@ -13,10 +13,10 @@
 	 */
 	import fetchProjects from "../lib/store/projectsStore";
 
-	let backendUri = "http://127.0.0.1:5000/";
+	let apiUri = "http://innosan.pythonanywhere.com/";
 
 	const [data, loading, error, get] = fetchProjects(
-		backendUri + "api/projects"
+		apiUri + "projects"
 	);
 </script>
 
