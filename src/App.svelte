@@ -10,7 +10,6 @@
 	Components
 	 */
 	import Header from "./lib/Components/Header.svelte";
-	import Footer from "./lib/Components/Footer.svelte";
 
 	/*
 	Pages
