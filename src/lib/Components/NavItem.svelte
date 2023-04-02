@@ -12,12 +12,17 @@
 	}
 </script>
 
-<div class="flex flex-col" on:mouseover={toggleVisibility} on:mouseout={toggleVisibility}>
-	<a href={pageLink} use:link class="opacity-70 hover:opacity-100 transition">
-		{title}
-		{#if icon}
-			<img src={icon} alt={title}>
-		{/if}
+<div class="flex flex-col">
+	<a
+		href={pageLink}
+		use:link
+		class="opacity-70 hover:opacity-100 transition"
+		on:mouseover={toggleVisibility}
+		on:mouseout={toggleVisibility}>
+			{title}
+			{#if icon}
+				<img src={icon} alt={title}>
+			{/if}
 	</a>
 	{#if visible}
 		<span class="hovering_over" transition:fly={{ x: -50, duration: 500 }}></span>
@@ -25,6 +30,10 @@
 </div>
 
 <style lang="scss">
+	div {
+		height: 105px;
+	}
+
 	a {
 		color: white;
 

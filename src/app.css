@@ -23,6 +23,8 @@ html {
 	background-image: url("./assets/media/back.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	overflow-y: overlay;
 }
 
 body {
@@ -41,6 +43,11 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h2 {
+	font-size: 2.2em;
+	line-height: 1.1;
 }
 
 .card {

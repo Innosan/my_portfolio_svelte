@@ -29,13 +29,15 @@
 	<div class="text-white font-bold text-2xl gap-4 flex flex-col text-right">
 		<h1>Hi, it's projects page!</h1>
 		<div class="flex flex-wrap flex-row-reverse gap-10">
-			{#each Object.values($data) as { title, description, created_at, tags, is_highlighted }}
+			{#each $data as { title, description, created_at, tags, is_highlighted, id }, image}
 				<ProjectCard
+					{id}
 					{title}
 					{description}
 					{created_at}
 					{tags}
 					{is_highlighted}
+					{image}
 				/>
 			{/each}
 		</div>
