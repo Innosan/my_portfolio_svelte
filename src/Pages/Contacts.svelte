@@ -1,8 +1,8 @@
 <script lang="ts">
-import AnimatedPage from "../lib/Components/ServiceComponents/Animated.svelte";
+import Animated from "../lib/Components/ServiceComponents/Animated.svelte";
 </script>
 
-<AnimatedPage>
+<Animated>
 	<div class="text-white flex flex-col items-end text-3xl font-bold">
 		<p>You can hit me up on</p>
 		<a href="">Telegram</a>
@@ -10,7 +10,7 @@ import AnimatedPage from "../lib/Components/ServiceComponents/Animated.svelte";
 		<p>and if you are in late 50s</p>
 		<a href="">send me an email</a>
 	</div>
-</AnimatedPage>
+</Animated>
 
 <style>
 </style>

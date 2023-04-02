@@ -11,11 +11,11 @@
 	/*
 	Stores
 	 */
-	import fetchProjects from "../lib/store/projectsStore";
+	import fetchData from "../lib/store/projectsStore";
 
-	let apiUri = "http://innosan.pythonanywhere.com/";
+	let apiUri = "http://127.0.0.1:5000/";
 
-	const [data, loading, error, get] = fetchProjects(
+	const [data, loading, error, get] = fetchData(
 		apiUri + "projects"
 	);
 </script>
@@ -29,13 +29,13 @@
 	<div class="text-white font-bold text-2xl gap-4 flex flex-col text-right">
 		<h1>Hi, it's projects page!</h1>
 		<div class="flex flex-wrap flex-row-reverse gap-10">
-			{#each Object.values($data) as { title, description, created_at, tags, isHighlighted }}
+			{#each Object.values($data) as { title, description, created_at, tags, is_highlighted }}
 				<ProjectCard
 					{title}
 					{description}
 					{created_at}
 					{tags}
-					{isHighlighted}
+					{is_highlighted}
 				/>
 			{/each}
 		</div>

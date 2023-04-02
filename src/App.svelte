@@ -17,6 +17,8 @@
 	 */
 	import Home from "./Pages/Home.svelte";
 	import Projects from "./Pages/Projects.svelte";
+	import Contacts from "./Pages/Contacts.svelte";
+	import Admin from "./Pages/Admin.svelte";
 
 	/*
 	Icons
@@ -24,7 +26,6 @@
 	import githubIcon from "./assets/icons/socials/Github.svg";
 	import spotifyIcon from "./assets/icons/socials/Spotify.svg";
 	import telegramIcon from "./assets/icons/socials/Telegram.svg";
-	import Contacts from "./Pages/Contacts.svelte";
 
 	let navItems = [
 		{
@@ -38,7 +39,11 @@
 		{
 			title: "Contacts",
 			link: "/contacts"
-		}
+		},
+		{
+			title: "Admin",
+			link: "/admin"
+		},
 	]
 
 	let footerItems = [
@@ -74,6 +79,9 @@
 		</Route>
 		<Route path="/contacts">
 			<Contacts/>
+		</Route>
+		<Route path="/admin">
+			<Admin/>
 		</Route>
 	</Router>
 
