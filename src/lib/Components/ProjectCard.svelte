@@ -4,8 +4,7 @@
 
 	//import { fetchImages } from "../store/projectsStore";
 
-
-    export let id, title, description, created_at, tags, is_highlighted, thumbnail_url;
+    export let title, description, created_at, tags, is_highlighted, thumbnail_url;
 
 	// const [ images, loading] = fetchImages(
 	// 	id
@@ -15,7 +14,7 @@
 
 {#if is_highlighted}
 	<Animated>
-		<div class="highlighted flex flex-col gap-10 items-end rounded-3xl" style="background-image: url({thumbnail_url})">
+		<div class="highlighted card_shadow flex flex-col gap-10 items-end rounded-3xl hover:shadow-2xl transition" style="background-image: url({thumbnail_url})">
 			<p class="text-xl text-black p-3 bg-white rounded-2xl mr-8">{created_at}</p>
 			<div class="flex flex-col p-8 gap-3 bg-black bg-opacity-70 backdrop-blur-sm rounded-3xl">
 				<div class="flex flex-row-reverse gap-10">
@@ -32,7 +31,7 @@
 	</Animated>
 {:else}
 	<Animated>
-		<div class="card_container flex flex-col gap-3 items-end bg-black rounded-3xl" style="background-image: url({thumbnail_url})">
+		<div class="card_container card_shadow flex flex-col gap-3 items-end bg-black rounded-3xl card_shadow transition" style="background-image: url({thumbnail_url})">
 			<div class="flex flex-row gap-5 pr-5">
 				{#each Object.values(tags) as tag}
 					<TechTag icon={tag.path} title={tag.title}/>
@@ -68,4 +67,10 @@
     .header_container {
         width: 380px;
     }
+
+	.card_shadow:hover {
+		--tw-shadow: 0 5px 20px -6px rgb(0 0 0 / 0.65);
+		--tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+		box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+	}
 </style>

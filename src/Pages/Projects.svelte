@@ -29,9 +29,8 @@
 	<div class="text-white font-bold text-2xl gap-8 flex flex-col text-right">
 		<h1>It's projects page!</h1>
 		<div class="flex flex-wrap flex-row-reverse gap-5">
-			{#each $data as { title, description, created_at, tags, is_highlighted, id, thumbnail_url }}
+			{#each $data as { title, description, created_at, tags, is_highlighted, thumbnail_url }}
 				<ProjectCard
-					{id}
 					{title}
 					{description}
 					{created_at}

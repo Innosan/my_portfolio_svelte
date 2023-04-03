@@ -44,7 +44,6 @@
 				}
 			})
 		}
-
 	}
 </script>
 
@@ -98,16 +97,24 @@
 
 		color: white;
 
-		font-size: 2rem;
+		font-size: 1.5rem;
 		font-weight: bold;
 
 		input {
 			border-radius: 12px;
 			color: #000;
 
+			font-size: 1.25rem;
+			width: 50%;
+
 			text-align: right;
 
 			padding: 10px;
 		}
+	}
+
+	button {
+		width: 40%;
+		align-self: end;
 	}
 </style>

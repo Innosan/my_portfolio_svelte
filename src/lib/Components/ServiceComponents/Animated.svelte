@@ -8,6 +8,8 @@
 
 <style>
 	div {
+		display: flex;
+		flex-direction: column;
 		padding: 10px 0 10px 0;
 	}
 </style>
