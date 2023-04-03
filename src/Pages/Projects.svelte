@@ -26,9 +26,9 @@
 	<Error error={error}/>
 {:else}
 <Animated>
-	<div class="text-white font-bold text-2xl gap-4 flex flex-col text-right">
-		<h1>Hi, it's projects page!</h1>
-		<div class="flex flex-wrap flex-row-reverse gap-10">
+	<div class="text-white font-bold text-2xl gap-8 flex flex-col text-right">
+		<h1>It's projects page!</h1>
+		<div class="flex flex-wrap flex-row-reverse gap-5">
 			{#each $data as { title, description, created_at, tags, is_highlighted, id, thumbnail_url }}
 				<ProjectCard
 					{id}

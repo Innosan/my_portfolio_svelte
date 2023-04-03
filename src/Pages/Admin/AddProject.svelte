@@ -1,5 +1,10 @@
 <script>
 	import Animated from "../../lib/Components/ServiceComponents/Animated.svelte";
+	import Toast from "../../lib/Components/ServiceComponents/Toast.svelte";
+
+	import { notifications } from "../../lib/store/notifications.ts";
+
+
 
 	let title, description, thumbnail_url, tags, created_at  = "";
 	let is_highlighted = false;
@@ -7,6 +12,7 @@
 	let result = null;
 
 	async function doPost () {
+
 		const res = await fetch('http://127.0.0.1:5000/projects', {
 			method: 'POST',
 			headers: {
@@ -27,9 +33,9 @@
 	}
 </script>
 
+
 <Animated>
 	<div>
-		<h2>{result}</h2>
 		<label for="title">
 			Project title
 			<input type="text" bind:value={title} name="title" id="title">
@@ -55,10 +61,20 @@
 			<input type="text" bind:value={tags} name="tags" id="tags">
 		</label>
 	</div>
-	<button on:click={doPost}>
+	<button
+			on:click={doPost}
+			on:click={() => {notifications.success({result})}}
+	>
 		Add
 	</button>
+	<button
+			on:click={() => {notifications.success({result})}}
+	>
+		SUCC
+	</button>
+
 </Animated>
+
 
 <style lang="scss">
 	div {

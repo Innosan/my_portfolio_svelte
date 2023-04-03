@@ -19,6 +19,7 @@
 	import Contacts from "./Pages/Contacts.svelte";
 	import Admin from "./Pages/Admin/Admin.svelte";
 	import AddProject from "./Pages/Admin/AddProject.svelte";
+	import Toast from "./lib/Components/ServiceComponents/Toast.svelte";
 
 	let navItems = [
 		{

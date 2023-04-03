@@ -52,20 +52,20 @@
     }
 
 	.highlighted {
-		width: 780px;
+		width: 880px;
 		height: 400px;
 		justify-content: flex-end;
 		background-size: cover;
 	}
 
     .card_container {
-        width: 438px;
+        width: 380px;
         justify-content: flex-end;
         height: 289px;
         background-size: cover;
     }
 
     .header_container {
-        width: 438px;
+        width: 380px;
     }
 </style>
