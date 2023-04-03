@@ -12,7 +12,7 @@
 		is_highlighted: false,
 	}
 
-	let result = "Please fill the inputs!";
+	let result = null;
 
 	async function doPost () {
 		let notValidated = Object.values(projectData).includes(null);
@@ -79,7 +79,6 @@
 		Add
 	</button>
 </Animated>
-
 
 <style lang="scss">
 	div {

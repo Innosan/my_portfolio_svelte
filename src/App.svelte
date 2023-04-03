@@ -1,5 +1,6 @@
 <script lang="ts">
 	import "./app.css";
+	import "./assets/styles/toast.css";
 
 	/**
 	 Types
@@ -48,6 +49,8 @@
 	const options:SvelteToastOptions = {
 		duration: 1500,
 		initial: 0,
+		reversed: false,
+		intro: { y: -100 }
 	}
 
 </script>

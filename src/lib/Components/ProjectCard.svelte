@@ -16,7 +16,7 @@
 {#if is_highlighted}
 	<Animated>
 		<div class="highlighted flex flex-col gap-10 items-end rounded-3xl" style="background-image: url({thumbnail_url})">
-			<p class="text-xl text-black p-3 bg-white rounded-2xl">{created_at}</p>
+			<p class="text-xl text-black p-3 bg-white rounded-2xl mr-8">{created_at}</p>
 			<div class="flex flex-col p-8 gap-3 bg-black bg-opacity-70 backdrop-blur-sm rounded-3xl">
 				<div class="flex flex-row-reverse gap-10">
 					<h2 class="text-4xl">{title}</h2>
@@ -53,7 +53,7 @@
 
 	.highlighted {
 		width: 880px;
-		height: 400px;
+		height: 480px;
 		justify-content: flex-end;
 		background-size: cover;
 	}

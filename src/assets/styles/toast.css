@@ -1,0 +1,12 @@
+/**
+All available classes in ToastItem.svelte (\node_modules\@zerodevx\svelte-toast\ToastItem.svelte)
+ */
+
+:root {
+    --toastContainerTop: 4rem;
+    --toastContainerRight: auto;
+    --toastContainerLeft: calc(50vw - 13rem);
+    --toastBorderRadius: 1.5rem;
+    --toastPadding: 1rem;
+    --toastWidth: 26rem;
+}
