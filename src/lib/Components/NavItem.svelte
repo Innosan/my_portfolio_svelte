@@ -1,5 +1,5 @@
-<script lang="ts">
-	import { fly } from 'svelte/transition';
+<script>
+	import {fly} from 'svelte/transition';
 
 	import {link} from "svelte-routing";
 

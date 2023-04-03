@@ -99,9 +99,9 @@ CUSTOM CLASSES
 
 */
 
-.strokeme {
+.stroke_me {
 	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke: 1px;
+	-webkit-text-stroke-width: 1px;
 	-webkit-font-smoothing: antialiased;
 
 	font-family: Overpass, sans-serif;

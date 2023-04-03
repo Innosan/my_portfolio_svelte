@@ -1,6 +1,6 @@
-<script lang="ts">
-    import Animated from "./ServiceComponents/Animated.svelte";
-    import TechTag from "./TechTag.svelte";
+<script>
+	import Animated from "./ServiceComponents/Animated.svelte";
+	import TechTag from "./TechTag.svelte";
 
 	//import { fetchImages } from "../store/projectsStore";
 

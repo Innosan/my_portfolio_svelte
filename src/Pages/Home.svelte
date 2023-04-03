@@ -27,9 +27,9 @@
 
 <Animated>
 	<div class="text-white font-bold text-5xl gap-4 flex flex-col text-right bg-black bg-opacity-40 bg-blend-color-dodge">
-		<h1 class="mb-1 heading"><span class="strokeme">Hi!</span></h1>
+		<h1 class="mb-1 heading"><span class="stroke_me">Hi!</span></h1>
 		<p class="text-6xl">I'm Mikhail,</p>
-		<p>lovely <span class="strokeme">front-end</span> developer</p>
+		<p>lovely <span class="stroke_me">front-end</span> developer</p>
 		<p class="text-2xl text-gray-200 underline">St. Petersburg, Russia</p>
 	</div>
 

@@ -1,5 +1,5 @@
-<script lang="ts">
-import Animated from "../lib/Components/ServiceComponents/Animated.svelte";
+<script>
+	import Animated from "../lib/Components/ServiceComponents/Animated.svelte";
 </script>
 
 <Animated>

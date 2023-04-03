@@ -1,7 +1,7 @@
 <script>
 	import Animated from "../../lib/Components/ServiceComponents/Animated.svelte";
 
-	import { toast }  from "@zerodevx/svelte-toast";
+	import {toast} from "@zerodevx/svelte-toast";
 
 	let projectData = {
 		title: null,

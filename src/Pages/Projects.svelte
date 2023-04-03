@@ -1,17 +1,17 @@
-<script lang="ts">
+<script>
 
 	/*
-	Components
-	 */
+Components
+ */
 	import Animated from "../lib/Components/ServiceComponents/Animated.svelte";
 	import ProjectCard from "../lib/Components/ProjectCard.svelte";
 	import Loader from "../lib/Components/ServiceComponents/Loader.svelte";
 	import Error from "../lib/Components/ServiceComponents/Error.svelte";
 
 	/*
-	Stores
-	 */
-	import { fetchData } from "../lib/store/projectsStore";
+Stores
+ */
+	import {fetchData} from "../lib/store/projectsStore";
 
 	let apiUri = "http://127.0.0.1:5000/";
 

@@ -8,19 +8,19 @@
 	import type {SvelteToastOptions} from "@zerodevx/svelte-toast/stores";
 
 	/*
-	Libs
-	 */
-	import { Router, Route } from 'svelte-routing'
-	import { SvelteToast } from "@zerodevx/svelte-toast";
+Libs
+ */
+	import {Route, Router} from 'svelte-routing'
+	import {SvelteToast} from "@zerodevx/svelte-toast";
 
 	/*
-	Components
-	 */
+Components
+ */
 	import Header from "./lib/Components/Header.svelte";
 
 	/*
-	Pages
-	 */
+Pages
+ */
 	import Home from "./Pages/Home.svelte";
 	import Projects from "./Pages/Projects.svelte";
 	import Contacts from "./Pages/Contacts.svelte";

@@ -1,7 +1,7 @@
 import type { Writable } from "svelte/store";
 import { writable } from "svelte/store";
 
-import { supabase } from "../supabaseClient";
+import type { GetProjectsResponse } from "../ts/types/Project";
 
 /**
  * Fetching data from some API
@@ -10,16 +10,31 @@ import { supabase } from "../supabaseClient";
  */
 export function fetchData(url: string) {
 	const loading: Writable<boolean> = writable(true);
-	const error: Writable<boolean> = writable(false);
-	const data: Writable<Array<object>> = writable([]);
+	const error: Writable<Error> = writable();
+
+	const data: Writable<GetProjectsResponse> = writable();
 
 	async function get() {
 		try {
-			const response: Awaited<Promise<any>> = await fetch(url);
+			const response = await fetch(url, {
+				method: "GET",
+				headers: {
+					Accept: "application/json",
+				},
+			});
 
-			data.set(await response.json());
+			if (!response.ok) {
+				throw new Error(
+					"Something bad happened! Status: " + response.status
+				);
+			}
+			const result = (await response.json()) as GetProjectsResponse;
+
+			data.set(result);
 		} catch (e) {
-			error.set(e);
+			if (e instanceof Error) {
+				error.set(e);
+			}
 		}
 		loading.set(false);
 	}
@@ -35,24 +50,24 @@ export function fetchData(url: string) {
  *
  * @param id - project id)
  */
-export function fetchImages(id: bigint) {
-	const imagesData: Writable<Array<object>> = writable([]);
-	const loading: Writable<boolean> = writable(true);
-
-	async function get() {
-		try {
-			const { data } = await supabase
-				.from("project_media")
-				.select()
-				.eq("project_id", id);
-
-			imagesData.set(data);
-		} finally {
-			loading.set(false);
-		}
-	}
-
-	get();
-
-	return [imagesData, loading];
-}
+// export function fetchImages(id: bigint) {
+// 	const imagesData: Writable<Array<object>> = writable([]);
+// 	const loading: Writable<boolean> = writable(true);
+//
+// 	async function get() {
+// 		try {
+// 			const { data } = await supabase
+// 				.from("project_media")
+// 				.select()
+// 				.eq("project_id", id);
+//
+// 			imagesData.set(data);
+// 		} finally {
+// 			loading.set(false);
+// 		}
+// 	}
+//
+// 	get();
+//
+// 	return [imagesData, loading];
+// }

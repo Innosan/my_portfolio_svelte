@@ -1,9 +1,9 @@
-<script lang="ts">
+<script>
     export let title, icon;
 
-    import { fly } from 'svelte/transition';
+	import {fly} from 'svelte/transition';
 
-    let visible = false;
+	let visible = false;
 
     function toggleVisibility() {
         visible = !visible;
