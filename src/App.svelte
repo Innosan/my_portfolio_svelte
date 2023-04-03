@@ -1,10 +1,16 @@
 <script lang="ts">
 	import "./app.css";
 
+	/**
+	 Types
+	 */
+	import type {SvelteToastOptions} from "@zerodevx/svelte-toast/stores";
+
 	/*
 	Libs
 	 */
 	import { Router, Route } from 'svelte-routing'
+	import { SvelteToast } from "@zerodevx/svelte-toast";
 
 	/*
 	Components
@@ -19,7 +25,6 @@
 	import Contacts from "./Pages/Contacts.svelte";
 	import Admin from "./Pages/Admin/Admin.svelte";
 	import AddProject from "./Pages/Admin/AddProject.svelte";
-	import Toast from "./lib/Components/ServiceComponents/Toast.svelte";
 
 	let navItems = [
 		{
@@ -39,6 +44,11 @@
 			link: "/admin"
 		},
 	]
+
+	const options:SvelteToastOptions = {
+		duration: 1500,
+		initial: 0,
+	}
 
 </script>
 
@@ -63,5 +73,6 @@
 			<AddProject/>
 		</Route>
 	</Router>
-
 </main>
+
+<SvelteToast {options}/>
