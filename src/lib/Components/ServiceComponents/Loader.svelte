@@ -5,6 +5,3 @@
 		</circle>
 	</svg>
 </div>
-
-<style>
-</style>

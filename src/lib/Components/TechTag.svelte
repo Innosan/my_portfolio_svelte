@@ -18,14 +18,3 @@
         <p transition:fly={{ x: -50, duration: 500 }}>{title}</p>
     {/if}
 </div>
-
-<style lang="scss">
-    .icon_container {
-      transition: .3s;
-      width: 56px;
-
-      &:hover {
-        width: 200px;
-      }
-    }
-</style>

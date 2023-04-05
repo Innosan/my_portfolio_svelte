@@ -1,5 +1,5 @@
 <script>
-	import Animated from "../lib/Components/ServiceComponents/Animated.svelte";
+	import Animated from "@components/ServiceComponents/Animated.svelte";
 </script>
 
 <Animated>
@@ -13,6 +13,3 @@
 		<a href="mailto: reau.beua@gmail.com">send me an em@il</a>
 	</div>
 </Animated>
-
-<style>
-</style>

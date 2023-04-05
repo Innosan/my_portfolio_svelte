@@ -1,6 +1,6 @@
 <script>
-	import Animated from "../../lib/Components/ServiceComponents/Animated.svelte";
-	import NavItem from "../../lib/Components/NavItem.svelte";
+	import Animated from "@components/ServiceComponents/Animated.svelte";
+	import NavItem from "@components/NavItem.svelte";
 </script>
 
 <Animated>

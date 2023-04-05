@@ -1,6 +1,7 @@
 <script lang="ts">
 	import "./app.css";
-	import "./assets/styles/toast.css";
+	import "@styles/toast.css";
+	import "@styles/media.scss";
 
 	/**
 	 Types
@@ -8,43 +9,26 @@
 	import type {SvelteToastOptions} from "@zerodevx/svelte-toast/stores";
 
 	/*
-Libs
- */
+	Libs
+	 */
 	import {Route, Router} from 'svelte-routing'
 	import {SvelteToast} from "@zerodevx/svelte-toast";
 
 	/*
-Components
- */
-	import Header from "./lib/Components/Header.svelte";
+	Components
+ 	*/
+	import Header from "@components/Header.svelte";
 
 	/*
-Pages
- */
+	Pages
+ 	*/
 	import Home from "./Pages/Home.svelte";
 	import Projects from "./Pages/Projects.svelte";
 	import Contacts from "./Pages/Contacts.svelte";
 	import Admin from "./Pages/Admin/Admin.svelte";
 	import AddProject from "./Pages/Admin/AddProject.svelte";
 
-	let navItems = [
-		{
-			title: "Home",
-			link: "/",
-		},
-		{
-			title: "Projects",
-			link: "/projects",
-		},
-		{
-			title: "Contacts",
-			link: "/contacts"
-		},
-		{
-			title: "Admin",
-			link: "/admin"
-		},
-	]
+	import {header} from "@utils/utilData.js";
 
 	const options:SvelteToastOptions = {
 		duration: 1500,
@@ -52,12 +36,10 @@ Pages
 		reversed: false,
 		intro: { y: -100 }
 	}
-
 </script>
 
 <main class="flex flex-col gap-10 float-right">
-
-	<Header navItems = {navItems}/>
+	<Header navItems = {header}/>
 
 	<Router>
 		<Route path="/">
@@ -76,6 +58,7 @@ Pages
 			<AddProject/>
 		</Route>
 	</Router>
+
 </main>
 
 <SvelteToast {options}/>

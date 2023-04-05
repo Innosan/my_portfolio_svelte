@@ -1,28 +1,8 @@
 <script>
-	import Animated from "../lib/Components/ServiceComponents/Animated.svelte";
-	import Footer from "../lib/Components/Footer.svelte";
+	import Animated from "@components/ServiceComponents/Animated.svelte";
+	import Footer from "@components/Footer.svelte";
 
-	import githubIcon from "../assets/icons/socials/Github.svg";
-	import spotifyIcon from "../assets/icons/socials/Spotify.svg";
-	import telegramIcon from "../assets/icons/socials/Telegram.svg";
-
-	let footerItems = [
-		{
-			icon: githubIcon,
-			link: "https://github.com/Innosan",
-			title: "GitHub"
-		},
-		{
-			icon: telegramIcon,
-			link: "https://t.me/inno_san",
-			title: "Telegram"
-		},
-		{
-			icon: spotifyIcon,
-			link: "https://open.spotify.com/artist/5CySiPyPSavXUd1RhJ3bUS?si=HVnCEumMSsqs8NYbULKNqg",
-			title: "Spotify"
-		},
-	]
+	import {footer} from "@utils/utilData.js";
 </script>
 
 <Animated>
@@ -33,7 +13,7 @@
 		<p class="text-2xl text-gray-200 underline">St. Petersburg, Russia</p>
 	</div>
 
-	<Footer footerItems={footerItems}/>
+	<Footer footerItems={footer}/>
 </Animated>
 
 <style>

@@ -1,0 +1,70 @@
+@media (max-width: 600px) {
+  footer {
+    display: flex !important;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+  .icon {
+    aspect-ratio: 0.8;
+  }
+  .flex {
+    display: block;
+  }
+  .projects {
+    display: grid;
+    gap: 0.5em;
+  }
+  .navitem-container a {
+    font-size: 1.3rem !important;
+  }
+  .card_container {
+    display: flex;
+    align-items: unset;
+    gap: 2em;
+    background-position: center;
+  }
+  .header_container {
+    display: grid;
+    gap: 1em;
+  }
+  .header_container h2, .header_container p {
+    width: fit-content;
+  }
+  .tags-container {
+    display: flex;
+    padding: 1.25em;
+  }
+  .icon_container {
+    display: flex;
+  }
+  .heading {
+    font-size: 2.2em;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .card_container {
+    min-height: 10em;
+    max-width: 320px;
+  }
+  .header_container {
+    max-width: 320px;
+  }
+}
+@media (min-width: 900px) {
+  .highlighted {
+    max-width: 700px;
+    min-height: 400px;
+  }
+  .card_container {
+    min-height: 300px;
+    max-width: 400px;
+  }
+}
+@media (min-width: 1180px) {
+  .highlighted {
+    min-width: 900px;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */

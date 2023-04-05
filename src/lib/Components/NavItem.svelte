@@ -1,6 +1,5 @@
 <script>
 	import {fly} from 'svelte/transition';
-
 	import {link} from "svelte-routing";
 
 	export let pageLink, title, icon;
@@ -12,7 +11,7 @@
 	}
 </script>
 
-<div class="flex flex-col">
+<div class="flex flex-col navitem-container">
 	<a
 		href={pageLink}
 		use:link
@@ -21,7 +20,7 @@
 		on:mouseout={toggleVisibility}>
 			{title}
 			{#if icon}
-				<img src={icon} alt={title}>
+				<img class="icon" src={icon} alt={title}>
 			{/if}
 	</a>
 	{#if visible}
@@ -29,11 +28,7 @@
 	{/if}
 </div>
 
-<style lang="scss">
-	div {
-		height: 105px;
-	}
-
+<style>
 	a {
 		color: white;
 
@@ -49,8 +44,6 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column-reverse;
-
-		gap: 20px;
 	}
 
 	.hovering_over {

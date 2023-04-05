@@ -1,5 +1,5 @@
 <script>
-	import Animated from "../../lib/Components/ServiceComponents/Animated.svelte";
+	import Animated from "@components/ServiceComponents/Animated.svelte";
 
 	import {toast} from "@zerodevx/svelte-toast";
 
