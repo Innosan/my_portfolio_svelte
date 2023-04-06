@@ -25,8 +25,6 @@
 	import Home from "./Pages/Home.svelte";
 	import Projects from "./Pages/Projects.svelte";
 	import Contacts from "./Pages/Contacts.svelte";
-	import Admin from "./Pages/Admin/Admin.svelte";
-	import AddProject from "./Pages/Admin/AddProject.svelte";
 
 	import {header} from "@utils/utilData.js";
 
@@ -50,12 +48,6 @@
 		</Route>
 		<Route path="/contacts">
 			<Contacts/>
-		</Route>
-		<Route path="/admin">
-			<Admin/>
-		</Route>
-		<Route path="/admin/add-project">
-			<AddProject/>
 		</Route>
 	</Router>
 
