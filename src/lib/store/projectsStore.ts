@@ -43,31 +43,3 @@ export function fetchData(url: string) {
 
 	return [data, loading, error];
 }
-
-/**
- * Maybe will use this for getting project screenshots
- * in future
- *
- * @param id - project id)
- */
-// export function fetchImages(id: bigint) {
-// 	const imagesData: Writable<Array<object>> = writable([]);
-// 	const loading: Writable<boolean> = writable(true);
-//
-// 	async function get() {
-// 		try {
-// 			const { data } = await supabase
-// 				.from("project_media")
-// 				.select()
-// 				.eq("project_id", id);
-//
-// 			imagesData.set(data);
-// 		} finally {
-// 			loading.set(false);
-// 		}
-// 	}
-//
-// 	get();
-//
-// 	return [imagesData, loading];
-// }

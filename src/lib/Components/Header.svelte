@@ -1,9 +1,8 @@
 <script>
 	import NavItem from "./NavItem.svelte";
+	import menuIcon from "@icons/ui/menu.svg";
 
 	export let navItems;
-
-	import menuIcon from "@icons/ui/menu.svg";
 
 	let clicked = false;
 

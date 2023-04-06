@@ -16,10 +16,6 @@ const data = {
 			title: "Contacts",
 			link: "/contacts",
 		},
-		{
-			title: "Admin",
-			link: "/admin",
-		},
 	],
 
 	footer: [

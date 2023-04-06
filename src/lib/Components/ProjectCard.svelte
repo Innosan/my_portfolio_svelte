@@ -54,6 +54,7 @@
 		justify-content: flex-end;
 		background-size: cover;
 	}
+
     .card_container {
         justify-content: flex-end;
 
